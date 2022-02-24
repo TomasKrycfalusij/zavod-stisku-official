@@ -46,7 +46,7 @@ forever(function vyhodnocovani() {
         } else if (player2 == true) {
             basic.showString("2")
             restart()
-        } else if (player1 == true && player2 == true) {
+        } else if (clicked_early1 == true && clicked_early2 == true) {
             basic.showString("R")
             restart()
         }
@@ -59,6 +59,9 @@ forever(function vyhodnocovani() {
         } else if (player2 == true) {
             playing = false
             basic.showString("B")
+            restart()
+        } else if (clicked_early1 == true && clicked_early2 == true) {
+            basic.showString("F")
             restart()
         }
         

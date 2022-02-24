@@ -47,7 +47,7 @@ forever(start)
 
 
 def vyhodnocovani():
-    global playing, player1, player2
+    global playing, player1, player2, clicked_early1, clicked_early2
     if playing == True:
         if player1 == True:
             basic.show_string("1")
@@ -55,7 +55,7 @@ def vyhodnocovani():
         elif player2 == True:
             basic.show_string("2")
             restart()
-        elif player1 == True and player2 == True:
+        elif clicked_early1 == True and clicked_early2 == True:
             basic.show_string("R")
             restart()
     elif playing == False:
@@ -66,6 +66,9 @@ def vyhodnocovani():
         elif player2 == True:
             playing = False
             basic.show_string("B")
+            restart()
+        elif clicked_early1 == True and clicked_early2 == True:
+            basic.show_string("F")
             restart()
 forever(vyhodnocovani)
 
