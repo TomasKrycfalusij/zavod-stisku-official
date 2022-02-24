@@ -55,6 +55,9 @@ def vyhodnocovani():
         elif player2 == True:
             basic.show_string("2")
             restart()
+        elif player1 == True and player2 == True:
+            basic.show_string("R")
+            restart()
     elif playing == False:
         if player1 == True:
             playing = False

@@ -46,6 +46,9 @@ forever(function vyhodnocovani() {
         } else if (player2 == true) {
             basic.showString("2")
             restart()
+        } else if (player1 == true && player2 == true) {
+            basic.showString("R")
+            restart()
         }
         
     } else if (playing == false) {
